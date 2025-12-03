@@ -7,6 +7,8 @@ import About from './screens/About';
 import Cart from './screens/Cart';
 import Contact from './screens/Contact';
 import CustomOrders from './screens/CustomOrders';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ProductDetail from './screens/ProductDetail';
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/custom-orders" element={<CustomOrders />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path ="/product/:id" element={<ProductDetail />} />
         </Routes>
         <Footer />
       </Router>

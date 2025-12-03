@@ -14,6 +14,7 @@
 }
 
 .App-header {
+  position: fixed;
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -36,3 +37,161 @@
     transform: rotate(360deg);
   }
 }
+
+.banner {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.banner-button{
+  background-color: #f6f9ff;
+  color: #000000;
+  padding: 10px 35px;
+  border: none;
+  border-radius: 2px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  position:absolute;
+  z-index: 1;
+  bottom: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.banner-container{
+   display: flex;
+  justify-content: center;
+  height: auto;        
+}
+
+.whitebox{
+  background-color: #ffffff;
+  padding: 40px;
+  margin:  0px auto;
+  border-radius: 8px;
+  box-shadow: 8px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+}
+
+.bg-light-sidebar{
+  background-color: #8b8b8b;
+}
+
+.whitebox p{
+  margin: 20px 80px
+}
+
+.whitebox h2{
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+/* Center main content area and avoid overlap with fixed header */
+.main-content{
+  display: flexbox;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0px  auto;
+  padding-top: 100px; /* leave space for fixed header; adjust if your header height differs */
+}
+
+.product{
+  background-color: #f8f8f8;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  width: 250px;
+  text-align: left;
+}
+
+/* Quantity selector and Add to Cart styles */
+.quantity-box{
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #d9d6d1;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  margin-left: 8px;
+}
+.quantity-button{
+  width: 36px;
+  height: 34px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.quantity-button:hover{
+  background: #f3f3f3;
+}
+.quantity-number{
+  padding: 6px 14px;
+  min-width: 36px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.add-to-cart-button{
+  display: inline-block;
+  background: #fff;
+  color: #111827;
+  border: 2px solid #e6d9c8;
+  padding: 12px 36px;
+  border-radius: 6px;
+  font-weight: 600;
+  margin-top: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.add-to-cart-button:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(16,24,40,0.08);
+}
+
+/* Make the controls stack nicely on small screens */
+@media (max-width: 640px){
+  .quantity-box{ transform: scale(0.95); }
+  .add-to-cart-button{ width: 100%; padding-left: 18px; padding-right: 18px; }
+}
+
+/* Rating layout for product cards */
+.ratingf{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.ratingf .rating{ display: inline-flex; align-items: center; gap: 6px; }
+.ratingf .rating i{ margin-right: 2px; font-size: 14px; }
+.ratingf span{ color: #6b7280; font-size: 0.95rem; }
+
+@media (max-width: 640px){
+  .ratingf .rating i{ font-size: 13px; }
+  .ratingf span{ font-size: 0.85rem; }
+}
+
+/* Product meta (price + rating) inline layout */
+.product-meta{
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+.product-price{
+  margin: 0;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* Ensure the rating inner container keeps stars and text on one line */
+.rating{ display: inline-flex !important; align-items: center; gap: 6px; }
+.rating i{ line-height: 1; }
