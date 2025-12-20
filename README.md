@@ -1,5 +1,4 @@
-Here is the simplified and concise `README.md` for your project, **LoopedByKlayd**, focusing only on the essential information and using a cleaner format for the routes.
-
+QUZI 2 BRANCH IS TO BE USED FOR QUIZ 2
 -----
 
 # 🧶 LoopedByKlayd: Crochet Arts & Crafts E-Commerce
